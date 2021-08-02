@@ -1,23 +1,35 @@
 import * as React from "react"
-import { Flex, NavLink, Button } from 'theme-ui'
+import { Flex, NavLink, Box, Text, Themed } from 'theme-ui'
+
+const buttonStyles = {
+  backgroundColor: '#000000',
+  color: '#ffffff',
+  padding: 15,
+  borderRadius: 5,
+}
 
 const IndexPage = () => {
   return (
-    <Flex>
+    <div>
      <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css" />
+    <Box bg='primary'>
     <Flex as="nav">
       <NavLink href="#!" p={2}>
         Home
       </NavLink>
       <NavLink href="#!" p={2}>
-        Blog
+        Products
       </NavLink>
       <NavLink href="#!" p={2}>
-        About
+        Brands
       </NavLink>
     </Flex>
-    <Flex>
-        <button class="snipcart-add-item"
+    </Box>
+    <div>
+
+        <button
+        style={buttonStyles} 
+        class="snipcart-add-item"
         data-item-id="starry-night"
         data-item-price="79.99"
         data-item-url="/paintings/starry-night"
@@ -28,11 +40,11 @@ const IndexPage = () => {
         data-item-custom1-type="textarea">
         Add to cart
       </button>
-    </Flex>
+    </div>
 
     <script async src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></script>
     <div hidden id="snipcart" data-api-key="N2U0ZjliNDctZTRkYy00NmQ1LWExODQtNmRkMjNlYjI3OGFlNjM3NjM0NTg0NzAzNzY5Njg1"></div>
-    </Flex>
+    </div>
   )
 }
 
