@@ -14,6 +14,13 @@ sections:
   new_doc_ext: md
   templates:
   - products
+- type: directory
+  path: content/catalogs
+  label: Catalogs
+  create: documents
+  match: "**/*"
+  templates:
+  - catalogs
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
