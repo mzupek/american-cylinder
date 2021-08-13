@@ -50,3 +50,19 @@ fields:
   label: Image
   description: Product's image URL. Avoid linking to a large image; try to use an
     optimized one.
+- name: catalog
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - Main
+    - Midwest
+    - Test Company
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Catalog
+  description: What product catalog it is available in
