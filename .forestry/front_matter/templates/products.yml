@@ -67,5 +67,4 @@ fields:
   label: Catalog
   description: What product catalog it is available in
 pages:
-- content/products/0000000001.md
 - content/products/0000000002.md
