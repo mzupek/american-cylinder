@@ -1,4 +1,52 @@
 ---
 label: Products
 hide_body: false
-fields: []
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: Name
+  description: Product's name
+- name: id
+  type: text
+  config:
+    required: true
+  label: ID
+  description: Product's unique ID
+- name: price
+  type: number
+  label: Price
+  description: Product's price. <em>You must use a </em><code><em>.</em></code><em>
+    as decimal separator.</em>
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+    required: true
+- name: url
+  type: text
+  config:
+    required: true
+  label: URL
+  description: Product's URL. Must be where the buy button is located. This will be
+    used by our crawler when validating order integrity.
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Description
+  description: Product description.
+- name: image
+  type: text
+  config:
+    required: true
+  label: Image
+  description: Product's image URL. Avoid linking to a large image; try to use an
+    optimized one.
